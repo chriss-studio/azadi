@@ -1,0 +1,34 @@
+AZADI · Meditación — prototipo v0.2
+
+PRUEBA LOCAL
+Abre index.html en un navegador de escritorio o sirve esta carpeta con un servidor HTTP local; la instalación PWA exige HTTPS (localhost también sirve para pruebas). El visor de archivos de iOS/Android puede bloquear JavaScript/audio; no equivale a una instalación. No hay un sitio publicado todavía.
+
+PUBLICAR GRATIS CON GITHUB PAGES
+1. En github.com, crea una cuenta e inicia sesión.
+2. Crea un repositorio público llamado azadi (New repository).
+3. Descomprime el ZIP. En el repositorio, Add file > Upload files; sube los archivos que contiene la carpeta, directamente en la raíz (no el ZIP ni la carpeta contenedora). Confirma con Commit changes.
+4. Settings > Pages > Build and deployment: Source = Deploy from a branch; branch main, carpeta /(root); Save.
+5. Cuando Pages muestre la URL publicada (normalmente https://TU-USUARIO.github.io/azadi/), ábrela en ambos dispositivos. A veces demora unos minutos en aparecer. No subas archivos personales, notas ni música a GitHub.
+6. iPhone/iPad: Safari > Compartir > Añadir a pantalla de inicio > Añadir (activar Abrir como app web si aparece).
+7. Android: Chrome > menú de tres puntos > Instalar aplicación o Añadir a pantalla de inicio. El nombre puede variar por versión.
+
+PRUEBAS EN DISPOSITIVOS
+- Probar un minuto de sesión, preparación, pausa, intervalos y cierre.
+- Probar mezcla y volúmenes, archivo de audio propio, exportación y restauración.
+- Verificar sonido con pantalla activa, bloqueo y retorno a la aplicación. El temporizador se calcula con hora real, pero el sonido de fondo y los avisos pueden suspenderse en segundo plano. Mantener la app visible es la opción más fiable en esta versión; el bloqueo de pantalla no está garantizado.
+- Abrir con internet una primera vez y luego probar modo avión: incluye caché offline por service worker.
+
+DATOS Y SONIDOS
+- Los dos perfiles (renombrables en Progreso > Mis datos) son locales e independientes, no son cuentas online. No hay servidor de datos ni sincronización. Exportar copias para transferir datos; la restauración reemplaza el perfil actual. No borres almacenamiento del navegador sin una copia.
+- El código se publica como sitio público; no contiene datos privados de meditación. Los archivos musicales y registros se guardan en el navegador/dispositivo, no se envían al servidor. Los archivos musicales no se incluyen en la copia JSON.
+- Los sonidos incluidos son síntesis digital de demostración, no grabaciones de instrumentos ni pistas comerciales. El audio importado se decodifica en memoria (máximo 40 MB por archivo, según compatibilidad del navegador); usa archivos propios o autorizados. Spotify es solo un enlace externo, no una integración de reproducción.
+- Sin garantías de funcionamiento en todas las versiones de iOS/Android. Los datos son locales y pueden perderse al borrar datos del sitio.
+
+ACTUALIZACIONES
+Reemplaza los archivos modificados en el repositorio y publica de nuevo. Actualiza el identificador CACHE de sw.js cuando cambien recursos. No hace falta instalar Xcode ni publicar en App Store/Play Store para esta modalidad.
+
+NOVEDADES V0.2
+14 sesiones, 7 guías originales con 3 voces sintéticas incluidas (Atlas, Nadir y Orión); no requieren una API. Las narraciones son fragmentos intercalados con pausas de práctica. Las mezclas de audio son síntesis digital en tiempo real. Los tiempos de las guías pueden aumentar si el usuario selecciona una duración demasiado corta. Las sesiones de sueño tienen cierre sin campana y un desvanecimiento opcional. En Explorar puedes elegir una voz por perfil.
+
+PRUEBAS EFECTUADAS
+Prueba automatizada de interfaz en Chromium con almacenamiento simulado: catálogo, selección de voz, reproducción de muestra, guía, pausa/reanudación, registro, mezclador y configuración de sueño. Sin errores de JavaScript. No se probó el audio escuchándolo físicamente ni se pudo validar instalación, service worker offline, reproducción con pantalla bloqueada o Safari/Android reales.
